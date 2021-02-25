@@ -125,7 +125,6 @@ if(isset($_POST['update'])){
           </div>    
         </form>  
 </div>
-
  <!--  end your code here-->
                                 <div class="module-foot">
                                 </div>

@@ -62,7 +62,7 @@
                                                 <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a href="match_new.php">Add New match</a></li>
+                                                <!-- <li><a href="team_new.php">Add New Team</a></li> -->
                                                 
                                             </ul>
                                         </div>

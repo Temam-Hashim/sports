@@ -40,6 +40,9 @@
                                             </ul>
                                         </div>
                                     </div>
+                                    <ul>
+                                      <li class="btn btn-primmary px-2 mx-2"><a href="../register.php">Add New Player</a></li>
+                                    </ul>
 <!-- 
                                     <div class="pull-right">
                                         <a href="#" class="btn btn-primary">Compose</a>

@@ -42,7 +42,10 @@
                                             </ul>
                                         </div>
                                     </div>
-<!-- 
+                                    <ul>
+                                      <li class="btn btn-primmary px-2 mx-2"><a href="match_new.php">Add New match</a></li>
+                                    </ul>
+<!--
                                     <div class="pull-right">
                                         <a href="#" class="btn btn-primary">Compose</a>
                                     </div> -->

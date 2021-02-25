@@ -106,6 +106,7 @@
                                           <li class="active"><a href="index.php">Home</a></li> 
                                           <li><a href="team.php">Team</a></li>
                                           <li><a href="match.php">Match</a></li>
+                                          <li><a href="table.php">Table</a></li>
                                           <!-- <li><a href="#">News</a></li>
                                           <li><a href="#">Blog</a></li> -->
                                           <li><a href="about.php">About</a></li>

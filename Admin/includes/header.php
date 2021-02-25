@@ -49,6 +49,7 @@
                                 </ul>
                             </li>
                             <li><a href="#">Support </a></li>
+                            <li><a href="../index.php">Home</a></li>
                             <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="images/user.png" class="nav-avatar" />
                                 <b class="caret"></b></a>
