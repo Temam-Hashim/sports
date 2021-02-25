@@ -56,14 +56,15 @@
                                                          $query = "SELECT * FROM `match` WHERE match_status='upcoming' ";
                                                          $result = mysqli_query($connect,$query);
                                                          while($row = mysqli_fetch_assoc($result)){
+                                                            $match_id = $row['match_id'];
                                                             $team_1 =$row['team_1'];
                                                             $team_2 =$row['team_2'];
                                                             $match_date = $row['match_date'];
                                                             $match_status = $row['match_status'];
                                                
-                                                      
+               
                                                       ?>
-                                                      <li><a href="match.php"><?php echo $team_1." vs ".$team_2;?></a></li>
+                                                      <li><a href="match_one.php?match_id=<?php echo $match_id; ?>"><?php echo $team_1." vs ".$team_2;?></a></li>
                                                    <?Php           } ?>  
                                                    </ul>
                                                 </li>
@@ -94,7 +95,7 @@
                                $team_2 = $row['team_2'];
                               ?>
                            
-
+                  <a href="match_one.php?match_id=<?php echo $match_id; ?>">
                            <ul>
                               <li>
                                  <img src="images/ecs1.jpg" width="80" alt="">
@@ -106,6 +107,7 @@
                                  <span><?php echo $team_2; ?></span>
                               </li>
                            </ul>
+                           </a>
 
                       <?php } ?>
                         </div>
