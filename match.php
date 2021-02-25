@@ -9,7 +9,7 @@
                                 <!-- match slider start -->
 
                                 <li class="dropdown mega-dropdown">
-                                             <a href="match.php" class="dropdown-toggle" data-toggle="dropdown">Match<span class="caret"></span></a>				
+                                             <a href="match.php" class="dropdown-toggle text-primary" data-toggle="dropdown" >Match<span class="caret"></span></a>				
                                              <ul class="dropdown-menu mega-dropdown-menu">
                                                 <li class="col-sm-8">
                                                    <ul>
@@ -53,7 +53,7 @@
                                                    <ul class="menu-inner">
                                                       <li class="dropdown-header text-primary">Next Matchs</li>
                                                       <?php 
-                                                         $query = "SELECT * FROM `match` WHERE match_status='upcoming' ";
+                                                         $query = "SELECT * FROM `match` WHERE match_status='upcoming' order by match_date desc";
                                                          $result = mysqli_query($connect,$query);
                                                          while($row = mysqli_fetch_assoc($result)){
                                                             $match_id = $row['match_id'];
@@ -88,7 +88,7 @@
                      <div class="feature-matchs">
                         <div class="team-btw-match">
                         <?php 
-                           $query = "SELECT * FROM `match` WHERE match_status='upcoming' ";
+                           $query = "SELECT * FROM `match` WHERE match_status='upcoming' order by match_date and match_time desc";
                            $result = mysqli_query($connect,$query);
                            while($row = mysqli_fetch_assoc($result)){
                                $team_1 = $row['team_1'];

@@ -151,23 +151,24 @@ require_once "includes/header.php";
                            $query = "SELECT * FROM `match` WHERE match_status='upcoming' ";
                            $result = mysqli_query($connect,$query);
                            while($row = mysqli_fetch_assoc($result)){
+                              $match_id = $row['match_id'];
                                $team_1 = $row['team_1'];
                                $team_2 = $row['team_2'];
                               ?>
                            
-
-                           <ul>
-                              <li>
-                                 <img src="images/ecs1.jpg" width="80" alt="">
-                                 <span><?php echo $team_1; ?></span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/ecs1.jpg" width="80" alt="">
-                                 <span><?php echo $team_2; ?></span>
-                              </li>
-                           </ul>
-
+                           <a href="match_one.php?match_id=<?php echo $match_id; ?>">
+                              <ul>
+                                 <li>
+                                    <img src="images/ecs1.jpg" width="80" alt="">
+                                    <span><?php echo $team_1; ?></span>
+                                 </li>
+                                 <li class="vs"><span>vs</span></li>
+                                 <li>
+                                    <img src="images/ecs1.jpg" width="80" alt="">
+                                    <span><?php echo $team_2; ?></span>
+                                 </li>
+                              </ul>
+                           </a>     
                       <?php } ?>
                         </div>
                      </div>

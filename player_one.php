@@ -9,7 +9,7 @@
                                 <!-- match slider start -->
                <ul class="breadcrumb">
                   <li><a href="index.php">Home</a></li>
-                  <li class="active">Match Detail</li>
+                  <li class="active">Player Detail</li>
                </ul>
             </div>
          </div>
@@ -24,16 +24,18 @@
                      <div class="feature-matchs">
                         <div class="team-btw-match">
                         <?php 
-                        if(isset($_GET['match_id'])){
-                          $match_id = $_GET['match_id'];
-                           $query = "SELECT * FROM `match` WHERE match_id=$match_id";
-                           $result = mysqli_query($connect,$query);
+                        if(isset($_GET['player_id'])){
+                          $player_id = $_GET['player_id'];
+
+                          $query = "SELECT * FROM player where player_id=$player_id";
+                          $result = mysqli_query($connect,$query);
+                      
                            while($row = mysqli_fetch_assoc($result)){
-                               $team_1 = $row['team_1'];
-                               $team_2 = $row['team_2'];
-                               $match_date = $row['match_date'];
-                               $match_time = $row['match_time'];
-                               $match_status = $row['match_status'];
+                              $player_image = $row['player_image'];
+                               $player_name = $row['player_name'];
+                               $player_email = $row['player_email'];
+                               $player_mobile = $row['player_mobile'];
+                               
                                
                                } 
                               }
@@ -41,38 +43,27 @@
 
                            <ul>
                               <li>
-                                 <img src="images/ecs1.jpg" width="80" alt="">
-                                 <span><?php echo $team_1; ?></span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/ecs1.jpg" width="80" alt="">
-                                 <span><?php echo $team_2; ?></span>
+                                 <img src="uploads/<?php echo !empty($row['player_image'])?$player_image:"blank2.png" ;?>" width="250" height="250" alt="">
+                                 <span class="text-center"><?php echo $player_name; ?></span>
                               </li>
                            </ul>
                         </div>
                      </div>
                   </aside>
-
                   <aside id="sidebar" class="left-bar">
                      <div class="feature-matchs">
                         <div class="team-btw-match">
+                        <!-- <h4 class="text-primary"><?php $player_name."Contact  Detail";?></h4> -->
                            <ul>
                               <li>
-                                <h5 class="text-primary">match date</h5> <span><?php echo $match_date; ?></span>
+                                <h5 class="text-normal">Player Email</h5> <span><a class="text-info text-center" title="click to mail" href="mailto:<?php echo $player_email; ?>"><?php echo $player_email; ?></a></span>
                               </li>
                             </ul>
                             <ul>
                               <li>
-                              <h5 class="text-primary">match time</h5> <span><?php echo $match_time." PM"; ?></span>
+                              <h5 class="text-normal">Player Phone</h5> <span> <a class="text-info text-center" title="click to call" href="tel://+91 <?php echo $player_mobile; ?>"><?php echo $player_mobile; ?></a></span>
                               </li>
                             </ul>
-                            <ul>
-                              <li>
-                              <h5 class="text-primary">match status</h5> <span><?php echo $match_status; ?></span>
-                              </li>
-                        
-                           </ul>
 
                         </div>
                      </div>

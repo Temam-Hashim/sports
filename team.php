@@ -45,15 +45,18 @@
                      $query1 = "SELECT * FROM player";
                      $result1 = mysqli_query($connect,$query1);
                      while($row = mysqli_fetch_assoc($result1)){
+                        $player_id = $row['player_id'];
                      ?>
                      <div class="col-md-3 column">
                         <div class="card">
-                           <img class="img-responsive" src="uploads/<?php echo empty($row['player_image'])? "blank2.png": $row['player_image'];?>" alt="<?php $row['player_name'];?>" style="width:100%">
+                           <img class="img-responsive" src="uploads/<?php echo !empty($row['player_image'])? $row['player_image']:"blank2.png" ;?>" alt="<?php $row['player_name'];?>" style="width:100%">
                            <div class="">
                               <h4><?php echo $row['player_name'];?></h4>
                               <p class="title"><?php echo $row['player_position'];?></p>
                               <p>
-                              <div class="center"><button class="button">Contact</button></div>
+                              <a href="player_one.php?player_id=<?php echo $player_id;?>">
+                                 <div class="center"><button class="button">Contact</button></div>
+                              </a>
                               </p>
                            </div>
                         </div>
@@ -82,7 +85,9 @@
                               <h4><?php echo $row['player_name'];?></h4>
                               <p class="title"><?php echo $row['player_position'];?></p>
                               <p>
-                              <div class="center"><button class="button">Contact</button></div>
+                              <a href="player_one.php?player_id=<?php echo $player_id;?>">
+                                 <div class="center"><button class="button">Contact</button></div>
+                              </a>
                               </p>
                            </div>
                         </div>
@@ -111,7 +116,9 @@
                               <h4><?php echo $row['player_name'];?></h4>
                               <p class="title"><?php echo $row['player_position'];?></p>
                               <p>
-                              <div class="center"><button class="button">Contact</button></div>
+                              <a href="player_one.php?player_id=<?php echo $player_id;?>">
+                                 <div class="center"><button class="button">Contact</button></div>
+                              </a>
                               </p>
                            </div>
                         </div>
@@ -139,7 +146,9 @@
                               <h4><?php echo $row['player_name'];?></h4>
                               <p class="title"><?php echo $row['player_position'];?></p>
                               <p>
-                              <div class="center"><button class="button">Contact</button></div>
+                              <a href="player_one.php?player_id=<?php echo $player_id;?>">
+                                 <div class="center"><button class="button">Contact</button></div>
+                              </a>
                               </p>
                            </div>
                         </div>
@@ -168,7 +177,9 @@
                               <h4><?php echo $row['player_name'];?></h4>
                               <p class="title"><?php echo $row['player_position'];?></p>
                               <p>
-                              <div class="center"><button class="button">Contact</button></div>
+                              <a href="player_one.php?player_id=<?php echo $player_id;?>">
+                                 <div class="center"><button class="button">Contact</button></div>
+                              </a>
                               </p>
                            </div>
                         </div>
