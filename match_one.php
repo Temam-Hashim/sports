@@ -34,6 +34,8 @@
                                $match_date = $row['match_date'];
                                $match_time = $row['match_time'];
                                $match_status = $row['match_status'];
+                               $res1 = $row['res1'];
+                               $res2 = $row['res2'];
                                
                                } 
                               }
@@ -67,11 +69,17 @@
                               <h5 class="text-primary">match time</h5> <span><?php echo $match_time." PM"; ?></span>
                               </li>
                             </ul>
+
                             <ul>
                               <li>
                               <h5 class="text-primary">match status</h5> <span><?php echo $match_status; ?></span>
                               </li>
-                        
+                           </ul>
+                           
+                           <ul>
+                              <li>
+                              <h5 class="text-primary">match Result</h5> <span><?php echo $team_1.' '.$res1.':'.$res2.' '.$team_2; ?></span>
+                              </li>
                            </ul>
 
                         </div>

@@ -4,7 +4,18 @@
   session_start();
 //   include "../auth.php";
   include "../includes/db.php";
-?>
+  //add column to match table
+    // $query = "ALTER  table `match` 
+    //           alter res1 set default 0";
+    // $res = mysqli_query($connect,$query);
+    // if($res){
+    //     echo "column added";
+    // }else{
+    //     echo mysqli_error($connect);
+    // }
+  
+  
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -61,6 +61,8 @@
                                             <th>Match Date</th>
                                             <th>Match Time</th>
                                             <th>Match status</th>
+                                            <th>Res1</th>
+                                            <th>Res2</th>
                                             <th colspan="2">Action</th>
                                           </tr>
                                         </thead>
@@ -77,6 +79,8 @@
                                             <td><?php echo $row['match_date'];?></td>
                                             <td><?php echo $row['match_time'];?></td>
                                             <td><?php echo $row['match_status'];?></td>
+                                            <td><?php echo $row['res1'];?></td>
+                                            <td><?php echo $row['res2'];?></td>
                                             <td> <a href="match_edit.php?edit_key=<?php echo $row['match_id'];?>">Edit</a> </td>
                                             <td> <a href="match.php?delete_key=<?php echo $row['match_id'];?>">Delete</a> </td>
                                           </tr>

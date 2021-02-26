@@ -45,6 +45,8 @@
       $m_date = $row['match_date'];
       $m_time = $row['match_time'];
       $m_status = $row['match_status'];
+      $m_res1 = $row['res1'];
+      $m_res2 = $row['res2'];
     }
 ?>
    <!-- your code here -->
@@ -55,6 +57,8 @@ if(isset($_POST['update'])){
    $date = $_POST['match_date'];
    $time = $_POST['match_time'];
    $status = $_POST['match_status'];
+   $res1 = $_POST['result1'];
+   $res2 = $_POST['result2'];
 
   
   // move_uploaded_file($_FILES['avatar']['tmp_name'],__DIR__."/uploads/".$_FILES['avatar']['name']);
@@ -62,7 +66,7 @@ if(isset($_POST['update'])){
 
       $query = "UPDATE  `match` SET 
               `team_1`='$team_1', `team_2`='$team_2', `match_date`='$date', `match_time`='$time',
-              `match_status`='$status' WHERE `match_id`=$p_id";
+              `match_status`='$status' ,`res1`='$res1',`res2`='$res2' WHERE `match_id`=$p_id";
 
       $result = mysqli_query($connect,$query);
       if($result){
@@ -128,6 +132,14 @@ if(isset($_POST['update'])){
           <div class="form-group">
             <label for="status">Match Time</label><span class="text-danger">*</span>
                <input type="time" class="form-control" name="match_time" value="<?php echo $m_time;?>">
+          </div>
+          <div class="form-group">
+            <label for="status">Result1</label><span class="text-danger">*</span>
+               <input type="number" class="form-control" name="result1" value="<?php echo $m_res2;?>">
+          </div>
+          <div class="form-group">
+            <label for="status">Result2</label><span class="text-danger">*</span>
+               <input type="number" class="form-control" name="result2" value="<?php echo $m_res2;?>">
           </div>
         
           

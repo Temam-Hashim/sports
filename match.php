@@ -88,7 +88,7 @@
                      <div class="feature-matchs">
                         <div class="team-btw-match">
                         <?php 
-                           $query = "SELECT * FROM `match` WHERE match_status='upcoming' order by match_date and match_time desc";
+                           $query = "SELECT * FROM `match` order by match_date and match_time desc";
                            $result = mysqli_query($connect,$query);
                            while($row = mysqli_fetch_assoc($result)){
                                $team_1 = $row['team_1'];
