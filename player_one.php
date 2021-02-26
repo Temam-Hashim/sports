@@ -1,4 +1,8 @@
-<?php require_once "includes/header.php"; ?>
+<?php 
+  
+  include "includes/header.php"; 
+  include "includes/auth.php"; 
+?>
 
 <div class="inner-page-banner">
             <div class="container">

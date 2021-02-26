@@ -34,27 +34,24 @@
 
    <!-- your code here -->
 <?php
-if(isset($_POST['new_result'])){
-   $team_name = $_POST['team_name'];
-   $played = $_POST['played'];
-   $win = $_POST['win'];
-   $draw = $_POST['draw'];
-   $loss = $_POST['loss'];
-   $point = $_POST['point'];
+if(isset($_POST['new_user'])){
+   $username = $_POST['username'];
+   $password = $_POST['password'];
+  
 
   
   // move_uploaded_file($_FILES['avatar']['tmp_name'],__DIR__."/uploads/".$_FILES['avatar']['name']);
 
  
-      $query = "INSERT INTO `results`(`team_name`, `played`, `win`, `draw`, `loss`,`point`) 
-                VALUES ('$team_name','$played','$win','$draw','$loss','$point')";
+      $query = "INSERT INTO `login`(`username`, `password`) 
+                VALUES ('$username','$password')";
 
       $result = mysqli_query($connect,$query);
       if($result){
-         echo "<script>alert('Result Added Successfully');</script>";
-         header("Location:result.php");
+         echo "<script>alert('User Added Successfully');</script>";
+         header("Location:user.php");
       }else{
-         echo "<script>alert('Result Adding Failed please try again');</script>";
+         echo "<script>alert('user Adding Failed please try again');</script>";
         //  echo mysqli_error($connect);
 
    }
@@ -69,42 +66,20 @@ if(isset($_POST['new_result'])){
       <div  style="margin:auto;width:90%;padding:10px;background:#f0e68c">
         
         <form action="" method="POST"  enctype="multipart/form-data" role="form">
-          <legend class="text-info text-center"> Add New Result </legend>
+          <legend class="text-info text-center"> Add New User</legend>
 
           <div class="form-group">
-            <label for="team">Team One</label><span class="text-danger">*</span>
-            <select class=" form-control" name="team_name" id="team_name" required>
-            <option value="">Select team</option>
-              <option value="CE&ETC">CE & ETC</option>
-              <option value="CSE&ME">CSE & ME</option>
-              <option value="ECS">ECS</option>
-              <option value="EEE">EEE</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="team">Match Played</label><span class="text-danger">*</span>
-            <input type="number" max="100" min="0" class="form-control" name="played" >
+            <label for="team">User Name</label><span class="text-danger">*</span>
+            <input type="text" class="form-control" name="username" >
           </div>  
           <div class="form-group">
-            <label for="team">Match Win</label><span class="text-danger">*</span>
-            <input type="number" max="100" min="0" class="form-control" name="win" >
+            <label for="team">Password</label><span class="text-danger">*</span>
+            <input type="password"  class="form-control" name="password" >
           </div>  
-          <div class="form-group">
-            <label for="team">Match Draw</label><span class="text-danger">*</span>
-            <input type="number" max="100" min="0" class="form-control" name="draw" >
-          </div>
-          <div class="form-group">
-            <label for="team">Match Loss</label><span class="text-danger">*</span>
-            <input type="number" max="100" min="0" class="form-control" name="loss" >
-          </div>
-         
-          <div class="form-group">
-            <label for="team">Total Point</label><span class="text-danger">*</span>
-            <input type="number" max="100" min="0" class="form-control" name="point" >
-          </div>  
+ 
 
           <div  style="margin:auto;width:50%;">
-            <button type="submit" max="100" min="0" class="btn btn-primary" name="new_result">ADD NEW Result</button>
+            <button type="submit"  class="btn btn-primary" name="new_user">ADD NEW USER</button>
           </div>    
         </form>
 </div>

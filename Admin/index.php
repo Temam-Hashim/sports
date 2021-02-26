@@ -1,5 +1,9 @@
 ﻿
-  <?php include "includes/header.php";?>
+ <?php 
+  
+  include "includes/header.php"; 
+  include "../includes/auth.php"; 
+?>
                     <!--/.span3-->
                     <div class="span9">
                         <div class="content">

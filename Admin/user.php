@@ -9,13 +9,13 @@
 <!-- delete Player -->
 <?php
   if(isset($_GET['delete_key'])){
-    $m_id = $_GET['delete_key'];
+    $user_id = $_GET['delete_key'];
 
-    $query = "DELETE FROM `match` WHERE `match_id`=$m_id";
+    $query = "DELETE FROM `login` WHERE `id`=$user_id";
     $result = mysqli_query($connect,$query);
     if($result){
-      echo "<script>alert('match deleted successfully')</script>";
-      header("Location:match.php");
+      echo "<script>alert('user deleted successfully')</script>";
+      header("Location:user.php");
     }
     else{
       echo "<script>alert('something wents wrong')</script>";
@@ -41,15 +41,15 @@
                                                 <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a href="match_new.php">Add New match</a></li>
+                                                <li><a href="user_new.php">Add New Result</a></li>
                                                 
                                             </ul>
                                         </div>
                                     </div>
                                     <ul>
-                                      <li class="btn btn-primmary px-2 mx-2"><a href="match_new.php">Add New match</a></li>
+                                      <li class="btn btn-primmary px-2 mx-2"><a href="user_new.php">Add New User</a></li>
                                     </ul>
-<!--
+<!-- 
                                     <div class="pull-right">
                                         <a href="#" class="btn btn-primary">Compose</a>
                                     </div> -->
@@ -59,41 +59,34 @@
                                       <table class="table table-bordered table-hover">
                                         <thead>
                                           <tr>
-                                            <th>match Id</th>
-                                            <th>Team One</th>
-                                            <th>Team Two</th>
-                                            <th>Match Date</th>
-                                            <th>Match Time</th>
-                                            <th>Match status</th>
-                                            <th>Res1</th>
-                                            <th>Res2</th>
-                                            <th colspan="2">Action</th>
+                                            <th>User Id</th>
+                                            <th>User Name</th>
+                                            <th colspan=2>Action</th>
+              
                                           </tr>
                                         </thead>
                                         <tbody>
                                         <?php
-                                            $query = "SELECT * FROM `match` order by `match_date`";
+                                            $query = "SELECT * FROM `login`";
                                             $result = mysqli_query($connect,$query);
                                             while($row = mysqli_fetch_assoc($result)){
                                         ?>
                                           <tr>
-                                            <td><?php echo $row['match_id'];?></td>
-                                            <td><?php echo $row['team_1'];?></td>
-                                            <td><?php echo $row['team_2'];?></td>
-                                            <td><?php echo $row['match_date'];?></td>
-                                            <td><?php echo $row['match_time'];?></td>
-                                            <td><?php echo $row['match_status'];?></td>
-                                            <td><?php echo $row['res1'];?></td>
-                                            <td><?php echo $row['res2'];?></td>
-                                            <td> <a href="match_edit.php?edit_key=<?php echo $row['match_id'];?>">Edit</a> </td>
-                                            <td> <a href="match.php?delete_key=<?php echo $row['match_id'];?>">Delete</a> </td>
+                                            <td><?php echo $row['id'];?></td>
+                                            <td><?php echo $row['username'];?></td>
+                                            
+                                            <td> <a href="user_edit.php?edit_key=<?php echo $row['id'];?>">Edit</a> </td>
+                                            <td> <a href="user.php?delete_key=<?php echo $row['id'];?>">Delete</a> </td>
                                           </tr>
                                           <?php }?>
                                         </tbody>
-                                      </table>  
+                                      </table>
+
                                 </div>
-                                <div class="module-foot">
-                                </div>
+                                <!-- <div class="module-foot">
+                                </div> -->
+                                <form class="form-inline">
+ 
                             </div>
                         </div>
                         <!--/.content-->
