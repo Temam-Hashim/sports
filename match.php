@@ -53,7 +53,7 @@
                                                    <ul class="menu-inner">
                                                       <li class="dropdown-header text-primary">Next Matchs</li>
                                                       <?php 
-                                                         $query = "SELECT * FROM `match` WHERE match_status='upcoming' order by match_date desc";
+                                                         $query = "SELECT * FROM `match` WHERE match_status='upcoming' order by match_date and match_time desc";
                                                          $result = mysqli_query($connect,$query);
                                                          while($row = mysqli_fetch_assoc($result)){
                                                             $match_id = $row['match_id'];

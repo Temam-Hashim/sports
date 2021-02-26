@@ -99,7 +99,7 @@
                            </thead>
                            <tbody>
                            <?php 
-                           $query = "SELECT * FROM `results`";
+                           $query = "SELECT * FROM `results` order by `point` desc";
                            $result = mysqli_query($connect,$query);
                            while($row = mysqli_fetch_assoc($result)){?>
                               <tr>
