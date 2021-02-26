@@ -91,7 +91,7 @@
                <div class="col-lg-4 col-sm-4 col-xs-12">
                    <aside id="sidebar" class="left-bar">
                      <div class="feature-matchs">
-                        <div class="team-btw-match match_one">
+                        <div class="team-btw-match">
                         <?php 
                            $query = "SELECT * FROM `match` order by `match_date` and `match_time`";
                            $result = mysqli_query($connect,$query);
@@ -103,7 +103,7 @@
                            
                             
                            <a class="match_one" href="match_one.php?match_id=<?php echo $match_id; ?>">
-                              <ul>
+                              <ul class="match_one">
                                  <li>
                                     <img src="images/ecs1.jpg" width="80" alt="">
                                     <span><?php echo $team_1; ?></span>
