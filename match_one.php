@@ -26,7 +26,7 @@
                         <?php 
                         if(isset($_GET['match_id'])){
                           $match_id = $_GET['match_id'];
-                           $query = "SELECT * FROM `match` WHERE match_id=$match_id";
+                           $query = "SELECT * FROM `match` WHERE `match_id`='$match_id'";
                            $result = mysqli_query($connect,$query);
                            while($row = mysqli_fetch_assoc($result)){
                                $team_1 = $row['team_1'];
@@ -36,6 +36,7 @@
                                $match_status = $row['match_status'];
                                $res1 = $row['res1'];
                                $res2 = $row['res2'];
+                               $color = "<div class='text-danger'>";
                                
                                } 
                               }
@@ -78,7 +79,7 @@
                            
                            <ul>
                               <li>
-                              <h5 class="text-primary">match Result</h5> <span><?php echo $team_1.' '.$res1.':'.$res2.' '.$team_2; ?></span>
+                              <h5 class="text-primary">match Result</h5> <span><?php echo $team_1.' '. $color.$res1.' : '.$res2.'</div>  '.$team_2; ?></span>
                               </li>
                            </ul>
 

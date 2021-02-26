@@ -72,7 +72,7 @@
                                         </thead>
                                         <tbody>
                                         <?php
-                                            $query = "SELECT * FROM `match` order by `match_date`";
+                                            $query = "SELECT * FROM `match` order by `match_date` and match_time";
                                             $result = mysqli_query($connect,$query);
                                             while($row = mysqli_fetch_assoc($result)){
                                         ?>

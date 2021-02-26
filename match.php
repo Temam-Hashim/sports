@@ -1,5 +1,10 @@
 <?php require_once "includes/header.php"; ?>
+<style>
+   .match_one:hover{
+      background:yellow;
 
+   }
+</style>
 <div class="inner-page-banner">
             <div class="container">
             </div>
@@ -64,7 +69,7 @@
                                                
                
                                                       ?>
-                                                      <li><a href="match_one.php?match_id=<?php echo $match_id; ?>"><?php echo $team_1." vs ".$team_2;?></a></li>
+                                                      <li><a  href="match_one.php?match_id=<?php echo $match_id; ?>"><?php echo $team_1." vs ".$team_2;?></a></li>
                                                    <?Php           } ?>  
                                                    </ul>
                                                 </li>
@@ -86,30 +91,33 @@
                <div class="col-lg-4 col-sm-4 col-xs-12">
                    <aside id="sidebar" class="left-bar">
                      <div class="feature-matchs">
-                        <div class="team-btw-match">
+                        <div class="team-btw-match match_one">
                         <?php 
-                           $query = "SELECT * FROM `match` order by match_date and match_time desc";
+                           $query = "SELECT * FROM `match` order by `match_date` and `match_time`";
                            $result = mysqli_query($connect,$query);
                            while($row = mysqli_fetch_assoc($result)){
+                               $match_id = $row['match_id'];
                                $team_1 = $row['team_1'];
                                $team_2 = $row['team_2'];
                               ?>
                            
-                  <a href="match_one.php?match_id=<?php echo $match_id; ?>">
-                           <ul>
-                              <li>
-                                 <img src="images/ecs1.jpg" width="80" alt="">
-                                 <span><?php echo $team_1; ?></span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/ecs1.jpg" width="80" alt="">
-                                 <span><?php echo $team_2; ?></span>
-                              </li>
-                           </ul>
-                           </a>
-
+                            
+                           <a class="match_one" href="match_one.php?match_id=<?php echo $match_id; ?>">
+                              <ul>
+                                 <li>
+                                    <img src="images/ecs1.jpg" width="80" alt="">
+                                    <span><?php echo $team_1; ?></span>
+                                 </li>
+                                 <li class="vs"><span>vs</span></li>
+                                 <li>
+                                    <img src="images/ecs1.jpg" width="80" alt="">
+                                    <span><?php echo $team_2; ?></span>
+                                 </li>
+                              </ul>
+                           </a>     
                       <?php } ?>
+
+       
                         </div>
                      </div>
                   </aside>
