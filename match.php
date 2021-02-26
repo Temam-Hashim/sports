@@ -69,7 +69,7 @@
                                                
                
                                                       ?>
-                                                      <li><a  href="match_one.php?match_id=<?php echo $match_id; ?>"><?php echo $team_1." vs ".$team_2;?></a></li>
+                                                      <li class="match_one"><a  href="match_one.php?match_id=<?php echo $match_id; ?>"><?php echo $team_1." vs ".$team_2;?></a></li>
                                                    <?Php           } ?>  
                                                    </ul>
                                                 </li>

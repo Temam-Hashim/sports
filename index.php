@@ -157,7 +157,7 @@ require_once "includes/header.php";
                               ?>
                            
                            <a href="match_one.php?match_id=<?php echo $match_id; ?>">
-                              <ul>
+                              <ul class="match_one">
                                  <li>
                                     <img src="images/ecs1.jpg" width="80" alt="">
                                     <span><?php echo $team_1; ?></span>
