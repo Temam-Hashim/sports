@@ -190,7 +190,7 @@ require_once "includes/header.php";
                            <tbody>
                            <?php 
                            $counter = 1;
-                           $query = "SELECT * FROM `results` order by point";
+                           $query = "SELECT * FROM `results` order by point desc";
                            $result = mysqli_query($connect,$query);
                            while($row = mysqli_fetch_assoc($result)){?>
                               <tr>

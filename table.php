@@ -99,18 +99,19 @@
                            </thead>
                            <tbody>
                            <?php 
+                           $counter = 1;
                            $query = "SELECT * FROM `results` order by `point` desc";
                            $result = mysqli_query($connect,$query);
                            while($row = mysqli_fetch_assoc($result)){?>
                               <tr>
-                                 <td>1</td>
+                                 <td><?php echo $counter; ?></td>
                                  <td><img src="images/<?php echo $row['team_image']; ?>" width="40" alt=""><?php echo $row['team_name']; ?></td>
                                  <td><?php echo $row['played']; ?></td>
                                  <td><?php echo $row['win']; ?></td>
                                  <td><?php echo $row['loss']; ?></td>
                                  <td><?php echo $row['point']; ?></td>
                               </tr>
-                              <?php }?> 
+                              <?php $counter = $counter+1; }?> 
                            </tbody>
                         </table>
                      </div>
