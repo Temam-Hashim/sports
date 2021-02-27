@@ -24,18 +24,17 @@
                                     <div class="span8">
                                         <div class="row-fluid">
                                             <div class="span12">
-                                                <a href="#" class="btn-box small span4"><i class="icon-envelope"></i><b>Messages</b>
-                                                </a><a href="#" class="btn-box small span4"><i class="icon-group"></i><b>Clients</b>
-                                                </a><a href="#" class="btn-box small span4"><i class="icon-exchange"></i><b>Expenses</b>
+                                                <a href="player.php" class="btn-box small span4"><i class="icon-envelope"></i><b>Player</b>
+                                                </a><a href="match.php" class="btn-box small span4"><i class="icon-group"></i><b>Matchs</b>
+                                                </a><a href="team.php" class="btn-box small span4"><i class="icon-exchange"></i><b>Team</b>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="row-fluid">
                                             <div class="span12">
-                                                <a href="#" class="btn-box small span4"><i class="icon-save"></i><b>Total Sales</b>
-                                                </a><a href="#" class="btn-box small span4"><i class="icon-bullhorn"></i><b>Social Feed</b>
-                                                </a><a href="#" class="btn-box small span4"><i class="icon-sort-down"></i><b>Bounce
-                                                    Rate</b> </a>
+                                                <a href="result.php" class="btn-box small span4"><i class="icon-save"></i><b>Result</b>
+                                                </a><a href="user.php" class="btn-box small span4"><i class="icon-bullhorn"></i><b>user</b>
+                                                </a><a href="logout.php" class="btn-box small span4"><i class="icon-sort-down"></i><b>logout</b> </a>
                                             </div>
                                         </div>
                                     </div>
