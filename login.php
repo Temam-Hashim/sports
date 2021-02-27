@@ -34,7 +34,7 @@ if(isset($_POST['login'])){
 
       if($db_username == $username && $db_password==$password){
         $_SESSION['username'] = $db_username;
-        header("location:Admin/index.php");
+        header("location:T-Admin/index.php");
       }else{
         echo "<script>alert('Login Failed. Incorrect Username or password');</script>";
         echo mysqli_error($connect);
