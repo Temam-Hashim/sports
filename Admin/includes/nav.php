@@ -27,6 +27,14 @@
                 <div class="row">
                     <div class="span3">
                         <div class="sidebar">
+                        <!-- collapse nav side bar -->
+                        <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <ul class="nav nav-icons">
+                            <li class="active"><a href="#"><i class="icon-envelope"></i></a></li>
+                            <li><a href="#"><i class="icon-eye-open"></i></a></li>
+                            <li><a href="#"><i class="icon-bar-chart"></i></a></li>
+                        </ul>
+                        <!-- collapser end -->
                             <ul class="widget widget-menu unstyled">
                                 <li class="active"><a href="index.php"><i class="menu-icon icon-dashboard"></i>Dashboard
                                 </a></li>
@@ -34,7 +42,9 @@
                                 </li>
                                 <li><a href="message.html"><i class="menu-icon icon-inbox"></i>Inbox <b class="label green pull-right">
                                     11</b> </a></li>
-                                <li><a href="task.html"><i class="menu-icon icon-tasks"></i>Tasks <b class="label orange pull-right">
+                                <li><a href="task.php"><i class="menu-icon icon-tasks"></i>Tasks <b class="label orange pull-right">
+                                    19</b> </a></li>
+                            <li><a href="table.php"><i class="menu-icon icon-table"></i>Table <b class="label orange pull-right">
                                     19</b> </a></li>
                             </ul>
                             <!--/.widget-nav-->
@@ -64,6 +74,7 @@
                                 </li>
                                 <li><a href="../logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
                             </ul>
+                            </div>
                         </div>
                         <!--/.sidebar-->
                     </div>

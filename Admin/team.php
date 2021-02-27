@@ -139,7 +139,7 @@
                                     </div> -->
                                 </div>
                                 <div class="table col-md-12" style="margin-bottom:10px;">
-                                      <table class="table table-bordered table-hover">
+                                      <table class="table table-bordered table-hover table-responsive">
                                         <thead>
                                           <tr>
                                             <th>Team Id</th>

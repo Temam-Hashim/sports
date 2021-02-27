@@ -47,14 +47,21 @@
                                     <ul>
                                       <li class="btn btn-primmary px-2 mx-2"><a href="../register.php">Add New Player</a></li>
                                     </ul>
+                                </div>
+                                       
+                            </div>
+                          </div>
+                            
+                        <!--/.content-->
+                    </div>
 <!-- 
                                     <div class="pull-right">
                                         <a href="#" class="btn btn-primary">Compose</a>
                                     </div> -->
 
-                                </div>
-                                <div class="module-body table">
-                                      <table class="table table-bordered table-hover">
+
+                                
+                                      <table class="table table-bordered table-hover table-resposive">
                                         <thead>
                                           <tr>
                                             <th>Player Id</th>
@@ -90,14 +97,10 @@
                                         </tbody>
                                       </table>
 
-                                    
-                                </div>
-                                <div class="module-foot">
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.content-->
-                    </div>
+                                <!-- <div class="module-body table  table-responsive">   
+                                </div> -->
+                         
+               
                     <!--/.span9-->
                 </div>
             </div>

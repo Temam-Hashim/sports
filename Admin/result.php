@@ -56,7 +56,7 @@
 
                                 </div>
                                 <div class="module-body table">
-                                      <table class="table table-bordered table-hover">
+                                      <table class="table table-bordered table-hover table-responsive">
                                         <thead>
                                           <tr>
                                             <th>Id</th>

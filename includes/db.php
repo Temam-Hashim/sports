@@ -1,10 +1,10 @@
 <?php
 ///local server
-  $username = "root";
-  $password="";
-  $db="sports";
-  $host = "localhost";
-  $connect = mysqli_connect($host,$username,$password,$db);
+  // $username = "root";
+  // $password="";
+  // $db="sports";
+  // $host = "localhost";
+  // $connect = mysqli_connect($host,$username,$password,$db);
 
 
 ///remote server
