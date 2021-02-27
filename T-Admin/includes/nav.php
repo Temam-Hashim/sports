@@ -23,19 +23,19 @@
             </form>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="javascript:;">
-                  <i class="material-icons">dashboard</i>
+                <a class="nav-link" href="../index.php">
+                  <i class="material-icons">Home</i>
                   <p class="d-lg-none d-md-block">
-                    Stats
+                    Home
                   </p>
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="../index.php" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
-                    Some Actions
+                    Notice
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -57,7 +57,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="../../login.php">Log out</a>
                 </div>
               </li>
             </ul>

@@ -1,9 +1,9 @@
 <?php 
    ob_start();
    session_start();
-   // include "../auth.php";
-   require_once "db.php"; 
-   require_once 'function.php';
+   include "../includes/auth.php";
+   require_once "../includes/db.php"; 
+  //  require_once 'function.php';
 
 ?>
 
@@ -48,6 +48,30 @@
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link" href="player.php">
+              <i class="material-icons">person</i>
+              <p>Player</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="team.php">
+              <i class="material-icons">content_paste</i>
+              <p>Team</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="match.php">
+              <i class="material-icons">bubble_chart</i>
+              <p>Matchs</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="result.php">
+              <i class="material-icons">content_paste</i>
+              <p>Result</p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link" href="user.php">
               <i class="material-icons">person</i>
               <p>User Profile</p>
@@ -83,18 +107,13 @@
               <p>Notifications</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="rtl.php">
               <i class="material-icons">language</i>
               <p>RTL Support</p>
             </a>
-          </li>
-          <li class="nav-item active-pro ">
-            <a class="nav-link" href="upgrade.php">
-              <i class="material-icons">unarchive</i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
+          </li> -->
+
         </ul>
       </div>
     </div>

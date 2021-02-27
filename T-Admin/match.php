@@ -25,36 +25,17 @@
   }
 
 ?>
-                    <div class="span9">
-                        <div class="content">
-                            <div class="module message">
-                                <div class="module-head">
-                                    <h3>
-                                        Players</h3>
-                                </div>
-                                <div class="module-option clearfix">
-                                    <div class="pull-left">
-                                        <div class="btn-group">
-                                            <button class="btn">
-                                                Action</button>
-                                            <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="match_new.php">Add New match</a></li>
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <ul>
-                                      <li class="btn btn-primmary px-2 mx-2"><a href="match_new.php">Add New match</a></li>
-                                    </ul>
-<!--
-                                    <div class="pull-right">
-                                        <a href="#" class="btn btn-primary">Compose</a>
-                                    </div> -->
 
-                                </div>
+  
+<div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                <h4 class="card-title " style="margin:auto;width:50%;"><a  href="match_new.php">Add New Match</a></h4>
+                </div>
+                <div class="card-body">
                                 <div class="module-body table">
                                       <table class="table table-bordered table-hover table-responsive">
                                         <thead>
@@ -92,16 +73,11 @@
                                         </tbody>
                                       </table>  
                                 </div>
-                                <div class="module-foot">
-                                </div>
+
                             </div>
                         </div>
-                        <!--/.content-->
+                      </div>
                     </div>
-                    <!--/.span9-->
-                </div>
-            </div>
-            <!--/.container-->
-        </div>
+             
 
   <?php include "includes/footer.php"; ?>
