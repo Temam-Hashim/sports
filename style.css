@@ -2194,3 +2194,28 @@ section.team h4 {
     font-weight: 500;
     margin-top: 10px !important;
 }
+
+
+/* gallery css */
+
+div.gallery {
+    margin: 30px;
+    margin-right: 20px;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+    font-size: 10px;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}

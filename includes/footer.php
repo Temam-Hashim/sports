@@ -1,3 +1,5 @@
+
+
 <footer id="footer" class="footer">
          <div class="container">
             <div class="row">
@@ -64,5 +66,11 @@
       <script src="js/all.js"></script>
       <!-- ALL PLUGINS -->
       <script src="js/custom.js"></script>
+
+      <!-- gallery script -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+      <script>
+         baguetteBox.run('.compact-gallery', { animation: 'slideIn'});
+      </script>
    </body>
 </html>

@@ -1,5 +1,5 @@
 <?php include "includes/header.php"; ?>
-<?php include "includes/auth.php"; ?>
+<?php include "../includes/auth.php"; ?>
 
    <!-- your code here -->
 <?php

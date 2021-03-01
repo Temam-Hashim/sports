@@ -1,4 +1,7 @@
-<?php include "includes/header.php";?>
+<?php 
+  include "includes/header.php";
+  include "../includes/auth.php";
+?>
     
       <!-- End Navbar -->
      
@@ -18,7 +21,7 @@
                   </div>
                    </a>
                   <div class="card-footer">
-            
+          
                   </div>
                 </div>
               </div>

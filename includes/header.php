@@ -1,11 +1,28 @@
 <?php 
    ob_start();
    session_start();
-   // include "../auth.php";
    require_once "db.php"; 
    require_once 'function.php';
 
+
 ?>
+
+
+<?php
+//INSERT INTO gallery(g_image,g_desc)VALUES('g10.jfif','Ethiopian Student valleyball match comptition. match played between ECS vs CE&ETC on 27 FEB 2021')
+//  
+   // $query  = "UPDATE gallery set g_date='2021-02-27'";
+   // $result = mysqli_query($connect,$query);
+   // if($result){
+   //    echo "date updated";
+   // }
+   // else{
+   //    mysqli_error($connect);
+   // }
+
+?>
+<!-- <div class="text-info bg-dark"><marquee>All This week match has postponeded</marquee></div> -->
+
 <!DOCTYPE html>
 <html lang="en">
    <!-- Basic -->
@@ -40,6 +57,14 @@
    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
    <script src="js/3dslider.js"></script>
+
+<!-- gallery header -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+
+
+
    </head>
    <body class="game_info" data-spy="scroll" data-target=".header">
       <!-- LOADER -->
@@ -107,10 +132,38 @@
                                           <li><a href="team.php">Team</a></li>
                                           <li><a href="match.php">Match</a></li>
                                           <li><a href="table.php">Table</a></li>
-                                          <!-- <li><a href="#">News</a></li>
-                                          <li><a href="#">Blog</a></li> -->
-                                          <li><a href="about.php">About</a></li>
                                           <li><a href="contact.php">contact</a></li>
+                                          <!-- drop down -->
+                  
+                                           <li class="nav-item dropdown">
+                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                More
+                                             </a>
+                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="news.php">News</a>
+                                                <a class="dropdown-item" href="gallery.php">Gallery</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="about.php">About</a>
+                                             </div>
+                                          </li> 
+                                          <!-- <li class="dropdown mega-dropdown">
+                                             <a href="match.php" class="dropdown-toggle text-primary" data-toggle="dropdown" >More<span class="caret"></span></a>				
+                                             <ul class="dropdown-menu mega-dropdown-menu">
+                                      
+                                                
+                                                <li class="col-sm-4">
+                                                
+                                                   <ul class="menu-inner">
+     
+                                                      <li class="match_one"><a  href="index.php">News</a></li>
+                                                      <li class="match_one"><a  href="gallery.php">Gallery</a></li>
+                                                      <li class="match_one"><a  href="about.php">About</a></li>
+                                            
+                                                   </ul>
+                                                </li>
+                                             </ul>
+                                          </li> -->
+    
                                           <li><a href="login.php">Login</a></li>
                                           <li><a href="register.php">Register</a></li>
                                        </ul>
