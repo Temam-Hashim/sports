@@ -28,6 +28,7 @@
                            <li><a href="team.php">Our Team</a></li>
                            <li><a href="news.php">Latest News</a></li>
                            <li><a href="contact.php">Contact Us</a></li>
+                           <li><a href="gallery.php">Gallery</a></li>
                            <li><a href="login.php">Login</a></li>
                            <li><a href="register.php">Register</a></li>
                         </ul>
